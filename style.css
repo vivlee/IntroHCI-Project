@@ -1,3 +1,15 @@
+
+
+body{
+  background: yellow;
+}
+@media screen and (min-width: 400px){
+  body{
+    background: green;
+  }
+
+}
+
 h1 {
   text-align:center;
 }
@@ -23,5 +35,5 @@ p{
 
 a {
   color:#000;
-
+  text-decoration: none;
 }
