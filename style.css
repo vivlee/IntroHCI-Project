@@ -1,0 +1,27 @@
+h1 {
+  text-align:center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li{
+  display:block;
+  margin-top: 50px;
+  width:300px;
+
+}
+
+
+p{
+  padding: 10px 10px 10px 10px;
+  background-color:grey;
+  border:1px solid black;
+  width: 200px;
+}
+
+a {
+  color:#000;
+
+}
