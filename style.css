@@ -13,7 +13,7 @@ h1 {
 ul {
   list-style-type: none;
 }
-ul li {
+.page-links ul li {
   display: block;
   margin-top: 50px;
   width: 300px;
@@ -27,4 +27,9 @@ p {
 a {
   color: #000;
   text-decoration: none;
+}
+
+.points {
+  background-color: grey;
+  width:350px;
 }

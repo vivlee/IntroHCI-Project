@@ -12,6 +12,7 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css"
   <!-- Latest compiled and minified JavaScript -->
 </head>
 
@@ -26,7 +27,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Meet New People</a>
+      <a class="navbar-brand" href="#">Meet</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,6 +45,12 @@
     <!-- /.navbar-collapse -->
 
     <div align = "center">
+    <div class = "points">
+      <h1> 453 POINTS </h1>
+    </div>
+  </div>
+
+    <div align = "center">
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active">
         <input type="radio" name="options" id="active-goals" autocomplete="off" checked> Active Goals
@@ -56,7 +63,7 @@
 
   </div>
 
-  <div class="panel-group">
+  <div class="panel-group" align="center">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -64,16 +71,16 @@
         </h4>
       </div>
       <div id="easy-collapse" class="panel-collapse collapse">
-        <ul class="list-group">
-          <li class="list-group-item">Say hi to your neighbor</li>
-          <li class="list-group-item">Wave hello at someone</li>
-          <li class="list-group-item">Compliment a stranger</li>
-        </ul>
+        <form>
+          <label><input type="checkbox" name="easy-list">Say hi to your neighbor</input></label><br>
+          <label><input type="checkbox" name="easy-list">Wave hello at someone</input></label><br>
+          <label><input type="checkbox" name="easy-list">Compliment a stranger</input></label><br>
+        </form>
       </div>
     </div>
   </div>
 
-  <div class="panel-group">
+  <div class="panel-group" align="center">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -81,16 +88,16 @@
         </h4>
       </div>
       <div id="medium-collapse" class="panel-collapse collapse">
-        <ul class="list-group">
-          <li class="list-group-item">One</li>
-          <li class="list-group-item">Two</li>
-          <li class="list-group-item">Three</li>
-        </ul>
+        <form>
+          <label><input type="checkbox" name="easy-list">One</input></label><br>
+          <label><input type="checkbox" name="easy-list">Two</input></label><br>
+          <label><input type="checkbox" name="easy-list">Three</input></label><br>
+        </form>
       </div>
     </div>
   </div>
 
-  <div class="panel-group">
+  <div class="panel-group" align="center">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -98,11 +105,11 @@
         </h4>
       </div>
       <div id="hard-collapse" class="panel-collapse collapse">
-        <ul class="list-group">
-          <li class="list-group-item">One</li>
-          <li class="list-group-item">Two</li>
-          <li class="list-group-item">Three</li>
-        </ul>
+        <form>
+          <label><input type="checkbox" name="easy-list">One</input></label><br>
+          <label><input type="checkbox" name="easy-list">Two</input></label><br>
+          <label><input type="checkbox" name="easy-list">Three</input></label><br>
+        </form>
       </div>
     </div>
   </div>
