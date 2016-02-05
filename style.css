@@ -31,16 +31,16 @@ a {
 
 .points {
   background-color: grey;
-  width:350px;
+  width:300px;
 }
 
 .new-goal-button {
   float: right;
+  margin-right:10px;
 }
 
 .level {
-  margin-left:400px;
-  margin-right:400px;
+
 }
 
 .level h1 {
