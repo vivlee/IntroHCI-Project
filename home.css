@@ -1,0 +1,39 @@
+body  {
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ background-image: url("images/summer.jpg");
+ background-position: center;
+}
+h1 {
+ text-align: center;
+}
+#home-screen-text h1 {
+ margin: 0px 0px 0px 0px;
+ font-weight:200;
+}
+#home-screen-text h2 {
+ margin: 50px 0px 0px 0px;
+ font-weight:200;
+}
+
+ul {
+ list-style-type: none;
+}
+.page-links ul li {
+ display: block;
+ margin-top: 50px;
+ width: 300px;
+}
+p {
+ padding: 10px 10px 10px 10px;
+ background-color: white;
+ border: 1px solid black;
+ width: 200px;
+ border-radius:15px;
+
+}
+
+a {
+ color: #000;
+ text-decoration: none;
+
+}
