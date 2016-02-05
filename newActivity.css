@@ -1,7 +1,11 @@
-.level {
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.level-container {
   margin: 0 auto;
+  margin-top:50px;
   width: 70%;
-  height: 550px;
   border-radius: 20px;
   text-align: center;
 }
@@ -13,4 +17,9 @@
 
 .level-selector {
   display: inline-block;
+}
+
+.activity-section{
+  margin-top:50px;
+  margin-bottom:50px;
 }
