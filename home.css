@@ -2,6 +2,7 @@ body  {
  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
  background-image: url("images/summer.jpg");
  background-position: center;
+ background-attachment: fixed;
 }
 h1 {
  text-align: center;
