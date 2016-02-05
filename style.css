@@ -33,3 +33,25 @@ a {
   background-color: grey;
   width:350px;
 }
+
+.level {
+  margin-left:400px;
+  margin-right:400px;
+}
+
+.level h1 {
+  float:left;
+  display: inline-block;
+
+}
+
+.level select {
+  display: inline-block;
+  float:right;
+}
+
+.activity-section {
+  margin-top: 150px;
+  display:inline-block;
+  position:relative;
+}
