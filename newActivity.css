@@ -1,0 +1,16 @@
+.level {
+  margin: 0 auto;
+  width: 70%;
+  height: 550px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.level-title {
+  display: inline-block;
+
+}
+
+.level-selector {
+  display: inline-block;
+}

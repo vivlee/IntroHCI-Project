@@ -3,30 +3,32 @@
 <head>
   <title>Social Butterfly | New Activity</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="newActivity.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div class="fluid-container">
-  <div class="level row">
-    <div class="col-6 pull-left fluid-container">
-      <h1>Level</h1>
+  <div class="level-container" align="center">
+    <div class="level-title">
+      <p>Level</p>
     </div>
-    <div class="col-6 pull-right fluid-container">
+  <div class="level-selector" form="levelform">
     <select name="level-difficulty">
       <option value="easy">Easy</option>
       <option value="medium">Medium</option>
       <option value="hard">Hard</option>
     </select>
   </div>
-  </div>
 </div>
 
-<div class ="fluid-container">
-<div class="activity-section">
-  <h1>Activity</h1>
+<div class="activity-section" align="center">
+  <p>Activity</p>
   <textarea name="ActivityDescription" rows="3"></textarea>
 </div>
+<div  align="center">
+<input class="btn" type="submit" value="Add Activity">
 </div>
 
 </body>
+
+</html>

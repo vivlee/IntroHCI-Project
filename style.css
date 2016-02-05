@@ -39,20 +39,6 @@ a {
   margin-right:10px;
 }
 
-.level {
-
-}
-
-.level h1 {
-  float:left;
-  display: inline-block;
-
-}
-
-.level select {
-  display: inline-block;
-  float:right;
-}
 
 .activity-section {
   margin-top: 150px;
