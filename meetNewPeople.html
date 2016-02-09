@@ -6,17 +6,23 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="handlebars-v4.0.5.js"></script>
+  <script src="javascript/meetNewPeople.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <!-- Optional theme -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script id="address-template" type="text/x-handlebars-template">
+    <!-- need to get each_easy working -->
+    {{#each activity}}
+        <label><input type="checkbox" name="easy-list">{{description}}</input></label><br>
+    {{/each}}
+  </script>
   <link rel="stylesheet" href="style.css"
-  <!-- Latest compiled and minified JavaScript -->
 </head>
 
 <body>
+  <div class="content-placeholder"></div>
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -76,9 +82,9 @@
       </div>
       <div id="easy-collapse" class="panel-collapse collapse">
         <form>
-          <label><input type="checkbox" name="easy-list">Say hi to your neighbor</input></label><br>
-          <label><input type="checkbox" name="easy-list">Wave hello at someone</input></label><br>
-          <label><input type="checkbox" name="easy-list">Compliment a stranger</input></label><br>
+          <div class = "easy-sublist">
+
+          </div>
         </form>
       </div>
     </div>
