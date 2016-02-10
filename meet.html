@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Butterfly | Meet New People</title>
+  <!-- Include the compiled Ratchet CSS -->
+  <link href="css/ratchet.css" rel="stylesheet">
+
+  <!-- Include the compiled Ratchet JS -->
+  <script src="js/ratchet.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="handlebars-v4.0.5.js"></script>
+  <script src="javascript/meetNewPeople.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <!-- Optional theme -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script id="address-template" type="text/x-handlebars-template">
+  <!-- need to get each_easy working -->
+  {{#each activity}}
+  <label><input type="checkbox" name="easy-list">{{description}}</input></label><br>
+  {{/each}}
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="content-placeholder"></div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Meet</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#" data-ignore="push" ><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Meet New People<span class="sr-only"></span></a></li>
+          <li><a href="connect.html" data-ignore="push" ><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Connect With Friends</a></li>
+          <li><a href="events.html" data-ignore="push" ><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>
+          <li><a href="accountSettings.html" data-ignore="push" ><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
+          <li><a href="faq.html" data-ignore="push" ><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
+        </ul>
+
+      </div>
+    </nav>
+    <!-- /.navbar-collapse -->
+
+    <div class="new-goal-button">
+      <a href="newActivity.html" class="btn btn-primary" data-ignore="push"><i class="fa fa-plus"></i></a>
+    </div>
+
+    <div align = "center">
+      <div class = "points">
+        <h1> 453 POINTS </h1>
+      </div>
+    </div>
+
+    <div align = "center">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" name="options" id="active-goals" autocomplete="off" checked> Active Goals
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="completed" autocomplete="off"> Completed
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-group" align="center">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#easy-collapse" data-ignore="push">Easy <span class="badge">3</span></a>
+        </h4>
+      </div>
+      <div id="easy-collapse" class="panel-collapse collapse">
+        <form>
+          <div class = "easy-sublist">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-group" align="center">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#medium-collapse" data-ignore="push">Medium <span class="badge">3</span></a>
+        </h4>
+      </div>
+      <div id="medium-collapse" class="panel-collapse collapse">
+        <form>
+          <label><input type="checkbox" name="easy-list"> One</input></label><br>
+          <label><input type="checkbox" name="easy-list"> Two</input></label><br>
+          <label><input type="checkbox" name="easy-list"> Three</input></label><br>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-group" align="center">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#hard-collapse" data-ignore="push">Hard <span class="badge">3</span></a>
+        </h4>
+      </div>
+      <div id="hard-collapse" class="panel-collapse collapse">
+        <form>
+          <label><input type="checkbox" name="easy-list"> One</input></label><br>
+          <label><input type="checkbox" name="easy-list"> Two</input></label><br>
+          <label><input type="checkbox" name="easy-list"> Three</input></label><br>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

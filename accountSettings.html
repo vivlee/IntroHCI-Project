@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>Social Butterfly | Meet New People</title>
+  <!-- Include the compiled Ratchet CSS -->
+  <link href="css/ratchet.min.css" rel="stylesheet">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -18,32 +21,141 @@
 
 <body>
   <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Settings</a>
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Settings</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="meetNewPeople.html" data-ignore="push"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Meet New People<span class="sr-only"></span></a></li>
+          <li><a href="connect.html" data-ignore="push"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Connect With Friends</a></li>
+          <li><a href="events.html" data-ignore="push"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>
+          <li class="active"><a href="#"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
+          <li><a href="faq.html" data-ignore="push"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="my_popup_open">
+      <h4>Services</h4>
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">
+            <a class="push-right" href="#">
+              Google Calendar
+            </a>
+
+            <!-- Add content to the popup -->
+            <div id="my_popup">
+
+              ...popup content...
+
+              <!-- Add an optional button to close the popup -->
+              <button class="my_popup_close">Close</button>
+
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+    <hr></hr>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="meetNewPeople.html"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Meet New People<span class="sr-only"></span></a></li>
-        <li><a href="connect.html"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Connect With Friends</a></li>
-        <li><a href="events.html"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>
-        <li class="active"><a href="#"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
-        <li><a href="faq.html"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
-      </ul>
+    <h4>Edit Profile</h4>
+    <div class="card">
+     <ul class="table-view">
+      <li class="table-view-cell">
+       <div class="input-row">
+         <label>Name</label>
+         <input type="text" placeholder="Shay Pearson">
+       </div>
+     </li>
+     <li class="table-view-cell">
+       <div class="input-row">
+         <label>Username</label>
+         <input type="text" placeholder="sp2016">
+       </div>
+     </li>
+     <li class="table-view-cell">
+      <div class="input-row">
+        <label>Email</label>
+        <input type="email" placeholder="spearson@gmail.com">
+      </div>
+    </li>
+    <li class="table-view-cell">
+      <a class="push-right" href="#">
+        Reset password
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+<hr></hr>
 
-    </div>
-  </nav>
+<h4>Email Notifications</h4>
+<div class="card">
+  <ul class="table-view">
+    <li class="table-view-cell">
+      Monthly
+      <div class="toggle">
+        <div class="toggle-handle"></div>
+      </div>
+    </li>
+    <li class="table-view-cell">
+      Weekly
+      <div class="toggle active">
+        <div class="toggle-handle"></div>
+      </div>
+    </li>
+    <li class="table-view-cell">
+      Daily
+      <div class="toggle">
+        <div class="toggle-handle"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+<hr></hr>
 
-    <h1>Coming soon</h1>
+<div class="card">
+  <form action="#">
+    <button class="btn btn-primary btn-block">Save settings</button>
+  </form>
+</div>
 
-    </body>
-    </html>
+<div class="card">
+  <form action="login.html">
+    <button class="btn btn-negative btn-block">Log out</button>
+  </form>
+</div>
+
+<!-- Include the compiled Ratchet JS -->
+<script src="js/ratchet.min.js"></script>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+<!-- Include jQuery Popup Overlay -->
+<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.11/jquery.popupoverlay.js"></script>
+
+<script>
+$(document).ready(function() {
+
+      // Initialize the plugin
+      $('#my_popup').popup();
+
+    });
+</script>
+
+</body>
+</html>

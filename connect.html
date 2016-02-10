@@ -2,6 +2,12 @@
 <html>
 <head>
   <title>Social Butterfly | Meet New People</title>
+  <!-- Include the compiled Ratchet CSS -->
+  <link href="css/ratchet.css" rel="stylesheet">
+
+  <!-- Include the compiled Ratchet JS -->
+  <script src="js/ratchet.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -17,79 +23,107 @@
 
 <body>
   <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Connect</a>
-    </div>
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Connect</a>
+      </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="meetNewPeople.html"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Meet New People<span class="sr-only"></span></a></li>
-        <li class="active"><a href="#"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Connect With Friends</a></li>
-        <li><a href="events.html"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>
-        <li><a href="accountSettings.html"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
-        <li><a href="faq.html"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
-      </ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="meetNewPeople.html" data-ignore="push"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Meet New People<span class="sr-only"></span></a></li>
+          <li class="active"><a href="#"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Connect With Friends</a></li>
+          <li><a href="events.html" data-ignore="push"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>
+          <li><a href="accountSettings.html" data-ignore="push"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
+          <li><a href="faq.html" data-ignore="push"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
+        </ul>
 
-    </div>
-  </nav>
+      </div>
+    </nav>
+
+ </div><!-- /.col-lg-6 -->
+  
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  
+  <hr></hr>
+   <button class="btn btn-primary btn-block">
+    <a href="newActivity.html" class="btn btn-primary" data-ignore="push"><i class="fa fa-plus"></i> Add new friend</a>
+  </button>
+  <hr></hr>
 
   <div class="panel-group" align="center">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" href="#first-collapse">Mike</a>
+          <a data-toggle="collapse" href="#first-collapse" data-ignore="push">Mike <span class="badge">2 days left</span></a>
         </h4>
       </div>
       <div id="first-collapse" class="panel-collapse collapse">
         <ul class="list-group">
           <li class="list-group-item"><p>Haven't seen since</p>
-                                      1/27/16</li>
-          <li class="list-group-item"><p>Goal is to see every 2 weeks</p></li>
-        </ul>
+            1/27/16</li>
+            <li class="list-group-item"><p>Goal is to see every 2 weeks</p>
+              <form action="editConnections.html">
+                <button class="btn btn-primary">Edit</button>
+              </form>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="panel-group" align="center">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#second-collapse">Deb</a>
-        </h4>
+    <div class="panel-group" align="center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#second-collapse" data-ignore="push">Deb <span class="badge">4 days left</span></a>
+          </h4>
+        </div>
+        <div id="second-collapse" class="panel-collapse collapse">
+          <ul class="list-group">
+            <li class="list-group-item"><p>Haven't seen since</p>
+              1/27/16</li>
+              <li class="list-group-item"><p>Goal is to see every 2 weeks</p>
+                <button class="btn btn-primary">Edit</button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div id="second-collapse" class="panel-collapse collapse">
-        <ul class="list-group">
-          <li class="list-group-item"><p>Haven't seen since</p>
-                                      1/27/16</li>
-          <li class="list-group-item"><p>Goal is to see every 2 weeks</p></li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <div class="panel-group" align="center">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#third-collapse">Viv</a>
-        </h4>
-      </div>
-      <div id="third-collapse" class="panel-collapse collapse">
-        <ul class="list-group">
-          <li class="list-group-item"><p>Haven't seen since</p>
-                                      1/22/16</li>
-          <li class="list-group-item"><p>Goal is to see every 2 weeks</p></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
+      <div class="panel-group" align="center">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#third-collapse" data-ignore="push">Viv <span class="badge">1 week left</span></a>
+            </h4>
+          </div>
+          <div id="third-collapse" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item"><p>Haven't seen since</p>
+                1/22/16</li>
+                <li class="list-group-item"><p>Goal is to see every 2 weeks</p>
+                  <button class="btn btn-primary">Edit</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <script src = "/js/ratchet.js"></script>
+
+      </body>
