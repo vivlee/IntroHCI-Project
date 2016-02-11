@@ -3,6 +3,7 @@
 <head>
   <title>Social Butterfly | Meet New People</title>
   <!-- Include the compiled Ratchet CSS -->
+  <!-- Include the compiled Ratchet CSS -->
   <link href="css/ratchet.css" rel="stylesheet">
 
   <!-- Include the compiled Ratchet JS -->
@@ -12,13 +13,19 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="handlebars-v4.0.5.js"></script>
+  <script src="javascript/meetNewPeople.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <!-- Optional theme -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
+  <script id="address-template" type="text/x-handlebars-template">
+  <!-- need to get each_easy working -->
+  {{#each activity}}
+  <label><input type="checkbox" name="easy-list">{{description}}</input></label><br>
+  {{/each}}
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -48,7 +55,7 @@
       </div>
     </nav>
 
- </div><!-- /.col-lg-6 -->
+  </div><!-- /.col-lg-6 -->
   
   <div class="col-lg-6">
     <div class="input-group">
@@ -60,8 +67,8 @@
   </div><!-- /.col-lg-6 -->
   
   <hr></hr>
-   <button class="btn btn-primary btn-block">
-    <a href="newActivity.html" class="btn btn-primary" data-ignore="push"><i class="fa fa-plus"></i> Add new friend</a>
+  <button class="btn btn-primary btn-block">
+    <a href="newConnect.html" class="btn btn-primary" data-ignore="push"><i class="fa fa-plus"> Add new friend </i></a>
   </button>
   <hr></hr>
 
@@ -77,7 +84,7 @@
           <li class="list-group-item"><p>Haven't seen since</p>
             1/27/16</li>
             <li class="list-group-item"><p>Goal is to see every 2 weeks</p>
-              <form action="editConnect.html">
+              <form action="editMike.html">
                 <button class="btn btn-primary">Edit</button>
               </form>
             </li>
@@ -98,7 +105,9 @@
             <li class="list-group-item"><p>Haven't seen since</p>
               1/27/16</li>
               <li class="list-group-item"><p>Goal is to see every 2 weeks</p>
-                <button class="btn btn-primary">Edit</button>
+                <form action="editDeb.html">
+                  <button class="btn btn-primary">Edit</button>
+                </form>
               </li>
             </ul>
           </div>
@@ -117,7 +126,9 @@
               <li class="list-group-item"><p>Haven't seen since</p>
                 1/22/16</li>
                 <li class="list-group-item"><p>Goal is to see every 2 weeks</p>
-                  <button class="btn btn-primary">Edit</button>
+                  <form action="editViv.html">
+                    <button class="btn btn-primary">Edit</button>
+                  </form>
                 </li>
               </ul>
             </div>
