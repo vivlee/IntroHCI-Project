@@ -16,7 +16,10 @@
   <script id="address-template" type="text/x-handlebars-template">
   <!-- need to get each_easy working -->
   {{#each activity}}
-  <label><input type="checkbox" name="easy-list">{{description}}</input></label><br>
+  <label><input type="checkbox" name="easy-list">{{description}}                     <form>
+              <button class="btn btn-info"> Edit </button>
+              <button class="btn btn-danger"> Delete </button>
+              </form></input></label><br>
   {{/each}}
   </script>
   <link rel="stylesheet" href="style.css">
