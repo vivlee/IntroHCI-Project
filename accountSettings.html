@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Social Butterfly | Meet New People</title>
+
   <!-- Include the compiled Ratchet CSS -->
   <link href="css/ratchet.min.css" rel="stylesheet">
 
@@ -35,7 +36,7 @@
 
   
   <style>
-  .modal-header, h4, .close {
+  .modal-header, h3, .close {
     background-color: #5cb85c;
     color:white !important;
     text-align: center;
@@ -71,64 +72,65 @@
           <li class="active"><a href="#"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
           <li><a href="faq.html" data-ignore="push"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
         </ul>
-
       </div>
     </nav>
 
+<div class="container">
     <!--Page content-->
-    <h3>Services</h3>
+    <h4>Services</h4>
     <div class="card">
       <ul class="table-view">
         <li class="table-view-cell">
           <a class="navigate-right">
             Google Calendar
-            <button class="btn" value="showAlert" onclick="showAlert();"> Sync now</button>
+            <button type="button" class="btn btn-secondary" value="showAlert" onclick="showAlert();"> Sync now</button>
           </a>
         </li>
       </ul>
     </div>
-  </div>
+
   <div class="container" style="display:none;" id="myAlert">
     <div class="alert alert-danger alert-dismissable" id="myAlert2">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       Your Google+ account is not connected. <a href="login.html" class="alert-link">Sign in now.</a>
     </div>
   </div>
+
   <hr></hr>
 
-  <h3>Edit Profile</h3>
-  <div class="card">
-   <ul class="table-view">
+    <h4>Edit Profile</h4>
+    <div class="card">
+     <ul class="table-view">
+      <li class="table-view-cell">
+       <div class="input-row">
+         <label>Name</label>
+         <input type="text" placeholder="Shay Pearson">
+       </div>
+     </li>
+     <li class="table-view-cell">
+       <div class="input-row">
+         <label>Username</label>
+         <input type="text" placeholder="sp2016">
+       </div>
+     </li>
+     <li class="table-view-cell">
+      <div class="input-row">
+        <label>Email</label>
+        <input type="email" placeholder="spearson@gmail.com">
+      </div>
+    </li>
     <li class="table-view-cell">
-     <div class="input-row">
-       <label>Name</label>
-       <input type="text" placeholder="Shay Pearson">
-     </div>
-   </li>
-   <li class="table-view-cell">
-     <div class="input-row">
-       <label>Username</label>
-       <input type="text" placeholder="sp2016">
-     </div>
-   </li>
-   <li class="table-view-cell">
-    <div class="input-row">
-      <label>Email</label>
-      <input type="email" placeholder="spearson@gmail.com">
-    </div>
-  </li>
-  <li class="table-view-cell">
-    <a class="navigate-right">
-      Change Password
-      <button class="btn" value="showAlert" onclick="showAlert();"> Reset</button>
-    </a>
-  </li>
-</ul>
+      <a class="push-right" href="#">
+        Reset password
+      </a>
+    </li>
+  </ul>
 </div>
 </div>
 <hr></hr>
 
-<h3>Email Notifications</h3>
+<div class="container">
+<h4>Email Notifications</h4>
 <div class="card">
   <ul class="table-view">
     <li class="table-view-cell">
@@ -152,54 +154,25 @@
   </ul>
 </div>
 </div>
-<hr></hr>
+</div>
+<br></br>
 
 
 <div class="container">
-  
   <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-primary btn-block" id="myBtn">Save settings</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4> Wait! </h4>
-        </div>
-        <div class="modal-body">
-         Are you sure you want to save your changes? 
-       </div>
-       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Don't save</button>
-        <button type="button" class="btn btn-primary">Save</button>
-      </div>
-    </div>
-  </div>
-</div> 
 </div>
 
-<!--Script for the modal pop-up-->
-<script>
-$(document).ready(function(){
-  $("#myBtn").click(function(){
-    $("#myModal").modal();
-  });
-});
-</script>
+<br></br>
 
-<!-- Login button --> 
-<div class="card">
+<!-- Logout button --> 
+<div class="container">
   <form action="login.html">
-    <button class="btn btn-negative btn-block">Log out</button>
-  </form>
+    <button class="btn btn-warning btn-block">Log out</button>
+  </form> 
 </div>
 
-<!-- Include the compiled Ratchet JS -->
-<script src="js/ratchet.min.js"></script>
+<br></br>
 
 <!-- Include jQuery -->
 <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
