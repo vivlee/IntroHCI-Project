@@ -28,10 +28,25 @@
   <script type="text/javascript">
   function showAlert(){
     if($("#myAlert").find("div#myAlert2").length==0){
-      $("#myAlert").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Your calendar has been synced.</div>");
+      $("#myAlert").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>x</button> Success! Your calendar has been synced.</div>");
     }
     $("#myAlert").css("display", "");
   }
+
+  function showReset(){
+    if($("#resetPass").find("div#resetPass2").length==0){
+      $("#resetPass").append("<div class='alert alert-warning alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>x</button> Your new password has been resent to your e-mail. </div>");
+    }
+    $("#resetPass").css("display", "");
+  }
+
+  function showSave(){
+    if($("#saveSettings").find("div#saveSettings2").length==0){
+      $("#saveSettings").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>x</button> Your settings have been saved. </div>");
+    }
+    $("#saveSettings").css("display", "");
+  }
+
   </script>
 
   
@@ -75,92 +90,110 @@
       </div>
     </nav>
 
-<div class="container">
-    <!--Page content-->
-    <h4>Services</h4>
-    <div class="card">
-      <ul class="table-view">
-        <li class="table-view-cell">
-          <a class="navigate-right">
-            Google Calendar
-            <button type="button" class="btn btn-secondary" value="showAlert" onclick="showAlert();"> Sync now</button>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <div class="container">
 
-  <div class="container" style="display:none;" id="myAlert">
-    <div class="alert alert-danger alert-dismissable" id="myAlert2">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      Your Google+ account is not connected. <a href="login.html" class="alert-link">Sign in now.</a>
-    </div>
-  </div>
-
-  <hr></hr>
-
-    <h4>Edit Profile</h4>
-    <div class="card">
-     <ul class="table-view">
-      <li class="table-view-cell">
-       <div class="input-row">
-         <label>Name</label>
-         <input type="text" placeholder="Shay Pearson">
-       </div>
-     </li>
-     <li class="table-view-cell">
-       <div class="input-row">
-         <label>Username</label>
-         <input type="text" placeholder="sp2016">
-       </div>
-     </li>
-     <li class="table-view-cell">
-      <div class="input-row">
-        <label>Email</label>
-        <input type="email" placeholder="spearson@gmail.com">
+      <!--Page content-->
+      <h4>Services</h4>
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">
+            <a class="navigate-right">
+              Google Calendar
+              <button type="button" class="btn btn-secondary" value="showAlert" onclick="showAlert();"> Sync now</button>
+            </a>
+          </li>
+        </ul>
       </div>
-    </li>
-    <li class="table-view-cell">
-      <a class="push-right" href="#">
-        Reset password
-      </a>
-    </li>
-  </ul>
+
+      <!--Alert for Google Sync -->
+      <div class="container" style="display:none;" id="myAlert">
+        <div class="alert alert-danger alert-dismissable" id="myAlert2">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+          Your Google+ account is not connected. <a href="login.html" class="alert-link">Sign in now.</a>
+        </div>
+      </div>
+
+      <hr></hr>
+
+      <h4>Edit Profile</h4>
+      <div class="card">
+       <ul class="table-view">
+        <li class="table-view-cell">
+         <div class="input-row">
+           <label>Name</label>
+           <input type="text" placeholder="Shay Pearson">
+         </div>
+       </li>
+       <li class="table-view-cell">
+         <div class="input-row">
+           <label>Username</label>
+           <input type="text" placeholder="sp2016">
+         </div>
+       </li>
+       <li class="table-view-cell">
+        <div class="input-row">
+          <label>Email</label>
+          <input type="email" placeholder="spearson@gmail.com">
+        </div>
+      </li>
+      <li class="table-view-cell">
+        <a class="push-right" href="#" value="showReset" onclick="showReset();">
+          Reset password
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
+
+<!--Alert for Google Sync -->
+<div class="container" style="display:none;" id="resetPass">
+  <div class="alert alert-warning alert-dismissable" id="resetPass2">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+    Your new password has been sent to your e-mail. <a href="#" class="alert-link"> Resend now.</a>
+  </div>
 </div>
+
 <hr></hr>
 
 <div class="container">
-<h4>Email Notifications</h4>
-<div class="card">
-  <ul class="table-view">
-    <li class="table-view-cell">
-      Monthly
-      <div class="toggle">
-        <div class="toggle-handle"></div>
-      </div>
-    </li>
-    <li class="table-view-cell">
-      Weekly
-      <div class="toggle active">
-        <div class="toggle-handle"></div>
-      </div>
-    </li>
-    <li class="table-view-cell">
-      Daily
-      <div class="toggle">
-        <div class="toggle-handle"></div>
-      </div>
-    </li>
-  </ul>
-</div>
+  <h4>Email Notifications</h4>
+  <div class="card">
+    <ul class="table-view">
+      <li class="table-view-cell">
+        Monthly
+        <div class="toggle">
+          <div class="toggle-handle"></div>
+        </div>
+      </li>
+      <li class="table-view-cell">
+        Weekly
+        <div class="toggle active">
+          <div class="toggle-handle"></div>
+        </div>
+      </li>
+      <li class="table-view-cell">
+        Daily
+        <div class="toggle">
+          <div class="toggle-handle"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 </div>
 <br></br>
 
-
 <div class="container">
   <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-primary btn-block" id="myBtn">Save settings</button>
+  <button type="button" class="btn btn-primary btn-block" id="myBtn" value="saveSettings" onClick="showSave();">Save settings</button>
+</div>
+
+<!--Alert for Saved Settings -->
+<div class="container" style="display:none;" id="saveSettings">
+  <div class="alert alert-success alert-dismissable" id="saveSettings2">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+    Your settings have been saved.</a>
+  </div>
 </div>
 
 <br></br>
@@ -181,6 +214,8 @@
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+<!-- Include the compiled Ratchet JS -->
+<script src="js/ratchet.min.js"></script>
 
 </body>
 </html>

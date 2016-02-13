@@ -5,73 +5,15 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>
-  .modal-header, h2, .close {
-      background-color: #5cb85c;
-      color:white !important;
-      text-align: center;
-      font-size: 20px;
-  }
-  .modal-footer {
-      background-color: #f9f9f9;
-  }
-  </style>
 </head>
 <body>
 
-  <div class="container">
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-block" id="myBtn"><span class="glyphicon glyphicon-plus"></span> Add new task </button>
-
-  <!-- Modal for Adding -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header" style="padding:35px 50px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2>New Task</h2>
-        </div>
-        <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
-
-  <div class="level-container" align="center">
-    <div class="level-title">
-      <label><p>Level</p></label>
-    </div>
-    <div class="level-selector" form="levelform">
-      <select name="level-difficulty">
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-      </select>
-    </div>
-  </div>
-<br>
-  <div class="activity-section" align="center">
-   <label> <p>Activity</p></label>
-              <input type="text" class="form-control" id="psw" placeholder="Enter new activity">
-              <br>
-            </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Add new task</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-        </div>
-      </div>
-      
-    </div>
-  </div> 
-</div>
- 
- <div class="container">
+<div class="container">
   <h1>Please Wait Modal Example</h1>
   <p>Click button to run demo..</p>
   <a href="#myLoginProgress" role="button" class="btn btn-primary" data-toggle="modal">Log in</a>
 </div>
-  
+
 
 <!-- Modal for Login-->
 <div class="modal fade" id="myLoginProgress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -94,43 +36,37 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
 <script>
-<!-- For Adding New -->
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
-    });
-});
 
 <!--for Login button-->
 $('#myLoginProgress').on('shown.bs.modal', function () {
- 
-    var progress = setInterval(function() {
+
+  var progress = setInterval(function() {
     var $bar = $('.bar');
 
     if ($bar.width()==500) {
-      
+
         // complete
-      
+
         clearInterval(progress);
         $('.progress').removeClass('active');
         $('#myLoginProgress').modal('hide');
         $bar.width(0);
         window.location.replace("index.html");
         
-    } else {
-      
+      } else {
+
         // perform processing logic here
-      
+
         $bar.width($bar.width()+50);
-    }
-    
-    $bar.text($bar.width()/5 + "%");
-  }, 800);
-  
-  
+      }
+
+      $bar.text($bar.width()/5 + "%");
+    }, 800);
+
+
 })
+
 </script>
 
 </body>
